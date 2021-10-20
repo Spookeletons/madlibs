@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  h1 Enter Your Words
+  form(method="POST" action="/story" id="words")
+    label(for="noun1") Noun:
+    input(type="text" name="noun1" id="noun1")
+    br
+    label(for="noun2") Noun:
+    input(type="text" name="noun2" id="noun2")
+    br
+    label(for="pluralNoun1") Plural Noun:
+    input(type="text" name="pluralNoun1" id="pluralNoun1")
+    br
+    label(for="verb1") Verb:
+    input(type="text" name="verb1" id="verb1")
+    br
+    label(for="adjective1") Adjective:
+    input(type="text" name="adjective1" id="adjective1")
+    br
+    label(for="adjective2") Adjective:
+    input(type="text" name="adjective2" id="adjective2")
+    br
+    label(for="adjective3") Adjective:
+    input(type="text" name="adjective3" id="adjective3")
+    br
+    label(for="name1") Name:
+    input(type="text" name="name1" id="name1")
+    br
+    label(for="shape1") Shape:
+    input(type="text" name="shape1" id="shape1")
+    br
+    label(for="food1") Food:
+    input(type="text" name="food1" id="food1")
+    br
+    label(for="food2") Food:
+    input(type="text" name="food2" id="food2")
+    br
+    label(for="nationality1") Nationality:
+    input(type="text" name="nationality1" id="nationality1")
+    br
+
+
+  label(for="storyChoice") Choose One
+  select(form="words" name="storyChoice" id="storyChoice")
+    option(value = "1") Story 1
+    option(value = "2") Story 2
+    option(value = "3") Story 3
+    option(value = "random") Pick For Me
+  br
+  button(type="submit" form="words") Tell Me a Story
